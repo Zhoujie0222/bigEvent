@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* width: 100%;
+  height: 100%; */
+}
+html,body {
+  height: 100vh;
+  background-image: url('../images/login_bg.jpg');
+  /* cover contain 区别 */
+  /* cover 以短边为准 */
+  /* contain 以长边为准 */
+  background-size: cover;
+}
+
+.login-reg-box {
+  width: 400px;
+  height: 320px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.login-reg-box h4 {
+  height: 60px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  text-align: center;
+  line-height: 60px;
+}
+.reg-wrap {
+  display: none;
+}

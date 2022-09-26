@@ -1,0 +1,51 @@
+<!--
+ * @Author: zhoujie 18326485422@163.com
+ * @Date: 2022-09-26 15:53:23
+ * @LastEditors: zhoujie 18326485422@163.com
+ * @LastEditTime: 2022-09-26 17:13:15
+ * @FilePath: \project-bigevent\login.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录页面</title>
+  <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+<!--
+  3、Live Server 小型服务器，打开的时候会默认占用5500端口 
+  4、wrapper 包裹的意思
+  http://127.0.0.1/ ip地址很特殊，表示是自己本地
+  http://localhost 域名的形式，表示是自己本地
+  192.168.37.201 本机的ip地址，也表示自己本地（查看本地IP地址的方式：ipconfig /all -[首选]）
+  http://0.0.0.0/表示本地回环地址，也表示是自己本地
+  如果像访问别人的网页效果，你可以把她的ip和端口拿过来就可以了 
+ -->
+
+<body>
+  <div class="layui-main">
+    <img src="./assets/images/logo.png" alt="">
+  </div>
+  <div class="login-reg-box">
+    <!-- 登录、注册框的标题区域 -->
+    <h4>
+      <img src="./assets/images/login_title.png" alt="">
+    </h4>
+    <!-- 登录、注册的表单区域 -->
+    <div class="login-wrap">
+      <a href="javascript:;" id="go2Reg">去注册</a>
+    </div>
+    <div class="reg-wrap">
+      <a href="javascript:;" id="go2Login">去登录</a>
+    </div>
+  </div>
+  <script src="./assets/lib/jquery.js"></script>
+  <script src="./assets/js/login.js"></script>
+</body>
+
+</html>
