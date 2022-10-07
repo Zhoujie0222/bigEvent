@@ -2,7 +2,7 @@
  * @Author: zhoujie 18326485422@163.com
  * @Date: 2022-09-29 16:12:58
  * @LastEditors: zhoujie 18326485422@163.com
- * @LastEditTime: 2022-10-07 09:24:37
+ * @LastEditTime: 2022-10-07 14:29:32
  * @FilePath: \project-bigevent\assets\js\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -44,18 +44,19 @@ function getUserInfo() {
 }
 
 const renderAvatar = (res) => {
+  // 取nickname 和 username
+  // 显示文字头像，取username属性的第一个字母
+  const name = res.data.nickname || res.data.username
+  const char = res.data.username.charAt(0).toUpperCase()
   if (res.data.user_pic) {
     $('.text-avatar').hide()
+    // attr prop 适用于对属性的操作
     $('.user-box img').attr('src', res.data.user_pic).show()
   } else {
     $('.layui-nav-img').hide()
-    // 取nickname 和 username
-    // 显示文字头像，取username属性的第一个字母
-    const name = res.data.nickname || res.data.username
-    const char = res.data.username.charAt(0).toUpperCase()
-    $('.text-avatar').css('display','flex').html(char).show()
+    $('.text-avatar').css('display', 'flex').html(char).show()
   }
-  $('.text').html(`欢迎&nbsp;&nbsp;${res.data.username}`)
+  $('.text').html(`欢迎&nbsp;&nbsp;${name}`)
 }
 
 // 实现退出操作
