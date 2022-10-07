@@ -2,10 +2,59 @@
   text-align: center;
   font-size: 12px;
 }
+
 .iconfont {
   margin-right: 8px;
 }
+
 .layui-icon {
   margin-left: 8px;
   margin-right: 20px;
+}
+.layui-body div {
+  height: 100%;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.layui-body {
+  overflow: hidden;
+}
+
+/* css */
+a {
+  transition: none !important;
+}
+.user-box {
+  display: flex;
+  /* width: 220px; */
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.user-box .layui-nav-img {
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+.user-box .text-avatar {
+width: 40px;
+height: 40px;
+background-color: lightgreen;
+color: #fff;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 16px;
+margin-right: 10px;
+display: none;
+
+}
+.user-box .text {
+  font-size: 12px;
+  user-select: none;
 }

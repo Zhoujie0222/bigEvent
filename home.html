@@ -2,7 +2,7 @@
  * @Author: zhoujie 18326485422@163.com
  * @Date: 2022-09-26 19:29:02
  * @LastEditors: zhoujie 18326485422@163.com
- * @LastEditTime: 2022-09-29 17:10:32
+ * @LastEditTime: 2022-10-07 09:38:53
  * @FilePath: \project-bigevent\home.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -24,24 +24,28 @@
 <body>
   <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-      <div class="layui-logo layui-hide-xs layui-bg-black"><img src="./assets/images/logo.png" alt=""></div>
+      <div class="layui-logo layui-hide-xs layui-bg-black">
+        <img src="./assets/images/logo.png" alt="">
+      </div>
       <!-- 头部区域（可配合layui 已有的水平导航） -->
       <ul class="layui-nav layui-layout-right">
-        <li class="layui-nav-item layui-hide layui-show-md-inline-block">
-          <a href="javascript:;">
+        <li class="layui-nav-item layui-hide
+        layui-show-md-inline-block">
+        <div class="user-box">
             <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
               class="layui-nav-img">
-            个人中心
-          </a>
+            <div class="text-avatar">黑</div>
+            <div class="text">黑马</div>
+        </div>
           <dl class="layui-nav-child">
-            <dd><a href="">基本信息</a></dd>
-            <dd><a href="">更换头像</a></dd>
-            <dd><a href="">重置密码</a></dd>
+            <dd><a href="./user/user_info.html" target="fm">基本信息</a></dd>
+            <dd><a href="./user/user_avatar.html" target="fm">更换头像</a></dd>
+            <dd><a href="./user/user_pwd.html" target="fm">重置密码</a></dd>
           </dl>
         </li>
         <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
-          <a href="javascript:;">
-            <i class="layui-icon layui-icon-face-smile"></i>
+          <a href="javascript:;" id="btnLogout">
+            <span class="iconfont icon-tuichu"></span>
             退出
           </a>
         </li>
@@ -50,18 +54,26 @@
 
     <div class="layui-side layui-bg-black">
       <div class="layui-side-scroll">
+        <!-- 头像区域 -->
+        <div class="user-box">
+          <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
+            class="layui-nav-img">
+            <div class="text-avatar">黑</div>
+            <div class="text">黑马</div>
+          </div>
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <!-- flex-shrink:1 0  lay-shrink="all" 兄弟菜单产生互斥效果-->
         <ul class="layui-nav layui-nav-tree" lay-shrink="all">
-          <li class="layui-nav-item">
-            <a href="javascript:;">
+          <li class="layui-nav-item layui-this">
+            <!-- target 指定页面在那个位置打开 -->
+            <a href="./home/dashboard.html" target="fm">
               <span class="iconfont icon-home"></span>
               首页
             </a>
           </li>
           <!--  layui-nav-itemed 默认展开 -->
           <li class="layui-nav-item">
-            <a class="" href="javascript:;"><span class="iconfont icon-pinglun"></span>文章管理</a>
+            <a class="" href="javascript:;"><span class="iconfont icon-pinglun"></span>文章管理</a> 
             <dl class="layui-nav-child">
               <dd><a href="javascript:;">分类管理</a></dd>
               <dd><a href="javascript:;">列表管理</a></dd>
@@ -71,9 +83,10 @@
           <li class="layui-nav-item">
             <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
             <dl class="layui-nav-child">
-              <dd><a href="javascript:;">基本信息</a></dd>
-              <dd><a href="javascript:;">更换头像</a></dd>
-              <dd><a href="javascript:;">重置密码</a></dd>
+              <!-- target 在当前页面跳转，不写会重新打开一个新页面打开 -->
+              <dd><a href="./user/user_info.html" target="fm">基本信息</a></dd>
+              <dd><a href="./user/user_avatar.html" target="fm">更换头像</a></dd>
+              <dd><a href="./user/user_pwd.html" target="fm">重置密码</a></dd>
             </dl>
           </li>
         </ul>
@@ -82,7 +95,11 @@
 
     <div class="layui-body">
       <!-- 内容主体区域 -->
-      <div style="padding: 15px;">内容主体区域。记得修改 layui.css 和 js 的路径</div>
+      <div>
+        <!-- iframe标签，给定src属性可以用来显示第三方的链接：https html 页面 -->
+        <!-- name 属性：就是相当于给iframe起了一个名字,方便后期找到它 -->
+        <iframe name="fm" src="./home/dashboard.html" ></iframe>
+      </div>
     </div>
 
     <div class="layui-footer">
