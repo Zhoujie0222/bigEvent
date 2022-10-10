@@ -2,7 +2,7 @@
  * @Author: zhoujie 18326485422@163.com
  * @Date: 2022-09-26 19:29:02
  * @LastEditors: zhoujie 18326485422@163.com
- * @LastEditTime: 2022-10-07 12:44:30
+ * @LastEditTime: 2022-10-09 16:54:40
  * @FilePath: \project-bigevent\home.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -76,8 +76,8 @@
             <a class="" href="javascript:;"><span class="iconfont icon-pinglun"></span>文章管理</a> 
             <dl class="layui-nav-child">
               <dd><a href="./cate/article_cate.html" target="fm">分类管理</a></dd>
-              <dd><a href="javascript:;">列表管理</a></dd>
-              <dd><a href="javascript:;">发表文章</a></dd>
+              <dd><a href="./article/art_list.html" target="fm">列表管理</a></dd>
+              <dd><a href="./article/art_pub.html" target="fm">发表文章</a></dd>
             </dl>
           </li>
           <li class="layui-nav-item">
@@ -112,5 +112,11 @@
   <script src="./assets/js/baseApi.js"></script>
   <script src="./assets/js/index.js"></script>
 </body>
-
+<!-- 隐藏域：
+      <input type="hidden" name="cate_id|id|userId" > 展现形式：不在页面中显示 作用：根据 name 属性。存储对应的数据
+      场景：一般只用于存储数据，不需要展示出来的数据 
+    
+    
+    通过 params 携带参数 - 展现形式就是在 url 地址后面拼接 /list?pagenum=1&pagesize=10
+    通过 data 携带参数 - /list 在请求体里面携带参数-->
 </html>
