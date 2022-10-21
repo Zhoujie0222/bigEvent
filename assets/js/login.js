@@ -2,7 +2,7 @@
  * @Author: zhoujie 18326485422@163.com
  * @Date: 2022-09-26 19:19:28
  * @LastEditors: zhoujie 18326485422@163.com
- * @LastEditTime: 2022-09-29 15:27:22
+ * @LastEditTime: 2022-10-21 12:02:14
  * @FilePath: \project-bigevent\assets\js\login.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -54,6 +54,7 @@ $(function () {
     $.ajax({
       method: 'POST',
       url: '/api/reg',
+      // url: '/api/reguser',
       // url: 'http://big-event-vue-api-t.itheima.net/api/reg',
       // contentType: 'application/json',
       // data:JSON.stringify({

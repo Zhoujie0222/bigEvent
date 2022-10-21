@@ -2,7 +2,7 @@
  * @Author: zhoujie 18326485422@163.com
  * @Date: 2022-09-29 15:51:45
  * @LastEditors: zhoujie 18326485422@163.com
- * @LastEditTime: 2022-10-06 15:31:56
+ * @LastEditTime: 2022-10-21 12:02:33
  * @FilePath: \project-bigevent\assets\js\baseApi.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -23,6 +23,7 @@ $.ajaxPrefilter(function (config) {
 
   // 在此处将基准地址拼接一下
   config.url = 'http://big-event-vue-api-t.itheima.net' + config.url
+  // config.url = 'http://127.0.0.1:9090' + config.url
 
   // 统一设置请求头 Content-Type
   config.contentType = 'application/json'
